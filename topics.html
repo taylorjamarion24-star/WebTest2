@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Web Design 101 — Topics</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="brand">Web Design 101</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="topics.html">Topics</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section class="card">
+      <h2>HTML</h2>
+      <p>Semantic tags, accessibility, lists, images, links and forms.</p>
+      <pre class="code">
+&lt;article&gt;
+  &lt;h3&gt;Semantic heading&lt;/h3&gt;
+  &lt;p&gt;A paragraph of text.&lt;/p&gt;
+&lt;/article&gt;
+      </pre>
+    </section>
+
+    <section class="card">
+      <h2>CSS Styling</h2>
+      <p>Selectors, Flexbox layout, responsive design, and subtle transitions.</p>
+      <pre class="code">
+.container {
+  display: flex;
+  gap: 1rem;
+}
+      </pre>
+    </section>
+
+    <section class="card">
+      <h2>JavaScript</h2>
+      <p>Event handling, DOM manipulation, and small interactive features.</p>
+      <pre class="code">
+// Toggle demo panel
+document.getElementById('toggleBtn').addEventListener('click', ...)
+      </pre>
+    </section>
+
+    <section class="card">
+      <h2>Mini Interaction</h2>
+      <p>Try the small color picker below to change the accent color (demonstrates event handling).</p>
+      <label for="accent">Accent:</label>
+      <select id="accent">
+        <option value="lightblue">Light blue</option>
+        <option value="#6fa3d8">Blue</option>
+        <option value="#8fbdbf">Teal</option>
+      </select>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year2"></span> Web Design 101 — Topics</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
