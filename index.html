@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Web Design 101 — Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="brand">Web Design 101</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="topics.html">Topics</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>Web Design 101</h1>
+    <p class="subtitle">A concise showcase of HTML, CSS, and JavaScript skills</p>
+    <a class="cta" href="topics.html">Explore Topics</a>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Project Overview</h2>
+      <p>This mini-site demonstrates the fundamentals we learned: semantic HTML, modern CSS (layout + responsive), and small JavaScript interactions. The design is minimal and clean with a grey + light-blue palette.</p>
+    </section>
+
+    <section class="card">
+      <h2>Interactive Demo</h2>
+      <p>Click the button to toggle a small interactive panel below.</p>
+      <button id="toggleBtn" class="btn">Show Demo</button>
+      <div id="demoPanel" class="demo hidden">
+        <h3>Live JavaScript Demo</h3>
+        <p>This panel was displayed using JavaScript event handling and a CSS transition.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn">MDN Web Docs</a></li>
+        <li><a href="topics.html">See full topic examples</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Web Design 101 — Minimal & Clean</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
