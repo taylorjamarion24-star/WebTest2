@@ -1,4 +1,15 @@
-:root{
+:root {
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #cfe7f7;      /* Will change with JS */
+  --accent-2: #9fc4e6;    /* Will change with JS */
+  --shadow: 0 6px 18px rgba(46,60,70,0.06);
+  --radius: 12px;
+
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+ot{
   --bg:#f4f6f8;
   --card:#ffffff;
   --muted:#6b7280; /* grey text */
