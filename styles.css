@@ -101,3 +101,66 @@ select#accent{padding:.4rem;border-radius:6px;margin-left:.5rem}
     line-height: 1.6;
   }
 </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn CSS</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #eef2ff;
+      padding: 20px;
+    }
+    .box {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .demo {
+      padding: 20px;
+      background: #0077cc;
+      color: white;
+      border-radius: 8px;
+      margin-top: 10px;
+      width: 200px;
+      text-align: center;
+    }
+    pre {
+      background: #222;
+      color: #0f0;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>CSS Basics</h1>
+
+<div class="box">
+  <h2>CSS Example</h2>
+  <p>CSS controls the colors, fonts, and layout of a webpage.</p>
+
+  <pre>
+<code>
+.demo {
+  background: blue;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+</code>
+  </pre>
+
+  <h3>CSS Demo:</h3>
+  <div class="demo">This is styled with CSS!</div>
+</div>
+
+</body>
+</html>
