@@ -1,111 +1,55 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Web Design 101 — Topics</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Course Topics</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <nav class="nav">
-    <div class="brand">Web Design 101</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="topics.html">Topics</a></li>
-    </ul>
-  </nav>
+<header>
+  <h1>CIS / Web Design Topics</h1>
+</header>
 
-  <main class="container">
-    <section class="card">
-      <h2>HTML</h2>
-      <p>Semantic tags, accessibility, lists, images, links and forms.</p>
-      <pre class="code">
-&lt;article&gt;
-  &lt;h3&gt;Semantic heading&lt;/h3&gt;
-  &lt;p&gt;A paragraph of text.&lt;/p&gt;
-&lt;/article&gt;
-      </pre>
-    </section>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="topics.html">Topics</a>
+</nav>
 
-    <section class="card">
-      <h2>CSS Styling</h2>
-      <p>Selectors, Flexbox layout, responsive design, and subtle transitions.</p>
-      <pre class="code">
-.container {
-  display: flex;
-  gap: 1rem;
-}
-      </pre>
-    </section>
+<div class="container">
 
-    <section class="card">
-      <h2>JavaScript</h2>
-      <p>Event handling, DOM manipulation, and small interactive features.</p>
-      <pre class="code">
-// Toggle demo panel
-document.getElementById('toggleBtn').addEventListener('click', ...)
-      </pre>
-    </section>
+  <div class="card">
+    <h2>Lecture Summaries</h2>
 
-    <section class="card">
-      <h2>Mini Interaction</h2>
-      <p>Try the small color picker below to change the accent color (demonstrates event handling).</p>
-      <label for="accent">Accent:</label>
-      <select id="accent">
-        <option value="lightblue">Light blue</option>
-        <option value="#6fa3d8">Blue</option>
-        <option value="#8fbdbf">Teal</option>
-      </select>
-    </section>
-    <section class="card">
-  <h2>Course Video</h2>
-  <p>This video gives a beginner-friendly introduction to HTML, which is one of the main skills we learned in Web Design 101.</p>
+    <h3>Lecture 01 — Brainstorming</h3>
+    <p>How to generate and evaluate creative ideas.</p>
+    <a href="Lecture 01 - Brainstorming (1).pptx" download>Download Slides</a>
 
-  <iframe
-    width="450"
-    height="300"
-    src="https://www.youtube.com/embed/UB1O30fR-EE"
-    title="HTML Crash Course for Beginners"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
-</section>
+    <hr>
 
-<section class="card">
-  <h2>Course Video</h2>
-  <p>This video explains Ai vs Man made websites which relates to Web Design 101 site.</p>
+    <h3>Lecture 02 — Computing History</h3>
+    <p>The evolution of computing technology.</p>
+    <a href="Lecture 02 - Computing History (1).pptx" download>Download Slides</a>
 
-  <!-- YouTube Embed -->
-  <iframe 
-    width="450" 
-    height="800"
-    src="https://www.youtube.com/embed/7TQoDyIPdsw" 
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    allowfullscreen>
-  </iframe>
-</section>
-  </main>
+    <hr>
 
-  <footer class="footer">
-    <p>© <span id="year2"></span> Web Design 101 — Topics</p>
-  </footer>
+    <h3>Lecture 03 & 04 — Data Storage</h3>
+    <p>How data is stored, measured, and represented.</p>
+    <a href="Lectures 03 & 04 Data Storage-1 (1).pptx" download>Download Slides</a>
 
-  <script src="script.js"></script>
+    <hr>
+
+    <h3>Lecture 05 — Databases</h3>
+    <p>How databases and SQL queries work.</p>
+    <a href="Lecture 05 DB (1).pptx" download>Download Slides</a>
+
+    <hr>
+
+    <h3>Lecture 06 — DB Relations & ERD</h3>
+    <p>Entities, attributes, relations, and ER diagrams.</p>
+    <a href="Lecture 06 DB (1).pptx" download>Download Slides</a>
+
+  </div>
+</div>
+
 </body>
 </html>
-<section class="card">
-  <h2>Mini Interaction</h2>
-  <p>Select a new accent color for the page:</p>
-
-  <label for="accent">Accent Color: </label>
-  <select id="accent">
-    <option value="#cfe7f7">Light Blue (Default)</option>
-    <option value="#7db8ff">Blue</option>
-    <option value="#8fbdbf">Teal</option>
-    <option value="#ffb3b3">Soft Red</option>
-    <option value="#ffd78a">Yellow</option>
-  </select>
-</section>
