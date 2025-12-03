@@ -1,53 +1,4 @@
-@@ -53,3 +53,49 @@ <h2>Quick Links</h2>
-  <script src="script.js"></script>
-</body>
-</html>
-<h1>CIS 101 Interactive Lecture Notes</h1>
-
-<div class="lecture" onclick="toggle('lec1')">Lecture 01 – Brainstorming</div>
-<div id="lec1" class="content">
-  <p>• What brainstorming is
-  <br>• Rules for brainstorming
-  <br>• Creativity techniques
-  <br>• Group vs. individual brainstorming
-  <br>• How brainstorming is used in computing</p>
-</div>
-
-<div class="lecture" onclick="toggle('lec2')">Lecture 02 – Computing History</div>
-<div id="lec2" class="content">
-  <p>• Early computation devices
-  <br>• Mechanical computers
-  <br>• ENIAC, UNIVAC
-  <br>• Microprocessors
-  <br>• Personal computers & modern evolution</p>
-</div>
-
-<div class="lecture" onclick="toggle('lec3')">Lectures 03 & 04 – Data Storage</div>
-<div id="lec3" class="content">
-  <p>• Bits and bytes
-  <br>• Storage units (KB, MB, GB, TB)
-  <br>• File formats
-  <br>• Binary representation
-  <br>• Magnetic, optical, solid-state storage</p>
-</div>
-
-<div class="lecture" onclick="toggle('lec5')">Lecture 05 – Databases</div>
-<div id="lec5" class="content">
-  <p>• What databases are
-  <br>• Tables, records, fields
-  <br>• Primary keys
-  <br>• Data integrity & normalization
-  <br>• Why databases matter</p>
-</div>
-
-<div class="lecture" onclick="toggle('lec6')">Lecture 06 – Databases (ERDs & Relations)</div>
-<div id="lec6" class="content">
-  <p>• Entity-relationship diagrams
-  <br>• Entities and attributes
-  <br>• Relationships (1:1, 1:M, M:M)
-  <br>• Foreign keys
-  <br>• Relational database structure</p>
-</div><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -133,253 +84,30 @@
 
   <div class="card">
     <h2>Learn HTML</h2>
-    <p>Understand the structure of webpages, elements, tags, attributes, and building layouts.</p>
+    <p>Understand webpage structure, elements, tags, and layout.</p>
     <a href="html.html" class="btn">Go to HTML Lessons</a>
   </div>
 
   <div class="card">
     <h2>Learn CSS</h2>
-    <p>Style your webpages with colors, fonts, layouts, and animations using CSS.</p>
+    <p>Style your webpages with colors, fonts, layouts, and animations.</p>
     <a href="css.html" class="btn">Go to CSS Lessons</a>
   </div>
 
   <div class="card">
     <h2>Learn JavaScript</h2>
-    <p>Add interactivity, animations, and functionality to your website using JavaScript.</p>
+    <p>Add interactivity, animations, and functionality.</p>
     <a href="javascript.html" class="btn">Go to JavaScript Lessons</a>
   </div>
 
   <div class="card">
     <h2>CIS 101 Interactive Lectures</h2>
-    <p>View interactive notes, coding demos, and mini-projects from your CIS 101 class.</p>
+    <p>See interactive notes and mini-projects.</p>
     <a href="lectures.html" class="btn">View CIS 101 Page</a>
-  </div>
-
-  <div class="card">
-    <h2>More Topics Coming Soon</h2>
-    <p>Databases, UI/UX design, APIs, servers and more!</p>
   </div>
 
 </div>
 
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CIS 101 Interactive Lecture Website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .lecture {
-      background: white;
-      padding: 20px;
-      margin: 10px 0;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 20px;
-      font-weight: bold;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .content {
-      display: none;
-      margin-top: 10px;
-      padding: 15px;
-      background: #fafafa;
-      border-left: 4px solid #0077cc;
-      border-radius: 6px;
-      line-height: 1.6;
-    }
-    pre {
-      background: #222;
-      color: #0f0;
-      padding: 10px;
-      border-radius: 6px;
-      overflow-x: auto;
-    }
-    button {
-      margin-top: 10px;
-      padding: 10px 15px;
-      border: none;
-      background: #0077cc;
-      color: white;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #005fa3;
-    }
-    input {
-      padding: 8px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      margin-right: 5px;
-    }
-  </style>
-</head>
-<body>
-  <h1>CIS 101 Interactive Lecture Notes</h1>
-
-  <!-- Lecture 01 -->
-  <div class="lecture" onclick="toggle('lec1')">Lecture 01 – Brainstorming</div>
-  <div id="lec1" class="content">
-    <p><strong>Summary:</strong><br>
-    Brainstorming encourages creative thinking without judgment to help generate new ideas and solve problems collaboratively.</p>
-
-    <h3>💡 Mini-Project: Random Idea Generator</h3>
-    <p>Click to generate a random brainstorming idea.</p>
-<pre>
-<code>
-// JavaScript Idea Generator
-const ideas = ["Create an AI robot", "Invent a water-powered phone", "Build a dream-journal app", "Make a homework automator"];
-function newIdea() {
-  alert(ideas[Math.floor(Math.random() * ideas.length)]);
-}
-</code>
-</pre>
-    <button onclick="newIdea()">Generate Idea</button>
-  </div>
-
-  <!-- Lecture 02 -->
-  <div class="lecture" onclick="toggle('lec2')">Lecture 02 – Computing History</div>
-  <div id="lec2" class="content">
-    <p><strong>Summary:</strong><br>
-    This lecture explored computing evolution from early tools like the abacus to modern digital machines.</p>
-
-    <h3>💡 Mini-Project: Interactive Computing Timeline</h3>
-    <p>Click a year to learn a computing milestone.</p>
-<pre>
-<code>
-const history = {
-  1970: "Birth of modern microprocessors",
-  1980: "Rise of personal computers",
-  1990: "Internet expansion",
-  2000: "Mobile computing boom"
-};
-</code>
-</pre>
-    <button onclick="alert(history[1970])">1970</button>
-    <button onclick="alert(history[1980])">1980</button>
-    <button onclick="alert(history[1990])">1990</button>
-    <button onclick="alert(history[2000])">2000</button>
-  </div>
-
-  <!-- Lecture 03 & 04 -->
-  <div class="lecture" onclick="toggle('lec3')">Lectures 03 & 04 – Data Storage</div>
-  <div id="lec3" class="content">
-    <p><strong>Summary:</strong><br>
-    Data storage includes bits/bytes, digital representation, and different storage devices such as SSD, HDD, and optical media.</p>
-
-    <h3>💡 Mini-Project: Binary → Decimal Converter</h3>
-    <p>Enter binary to convert it into decimal.</p>
-<pre>
-<code>
-function convertBinary() {
-  const bin = document.getElementById('binInput').value;
-  alert(parseInt(bin, 2));
-}
-</code>
-</pre>
-    <input id="binInput" maxlength="8" placeholder="e.g., 10101010" />
-    <button onclick="convertBinary()">Convert</button>
-  </div>
-
-  <!-- Lecture 05 -->
-  <div class="lecture" onclick="toggle('lec5')">Lecture 05 – Databases</div>
-  <div id="lec5" class="content">
-    <p><strong>Summary:</strong><br>
-    Databases store structured information in tables consisting of fields and records. You learned keys and data integrity.</p>
-
-    <h3>💡 Mini-Project: SQL Table Example</h3>
-<pre>
-<code>
-CREATE TABLE Students (
-  id INT PRIMARY KEY,
-  name VARCHAR(50),
-  grade INT
-);
-INSERT INTO Students VALUES (1, 'Alex', 90);
-SELECT * FROM Students;
-</code>
-</pre>
-  </div>
-
-  <!-- Lecture 06 -->
-  <div class="lecture" onclick="toggle('lec6')">Lecture 06 – ERDs & Relationships</div>
-  <div id="lec6" class="content">
-    <p><strong>Summary:</strong><br>
-    ERDs show entities, attributes, and relationships. You learned 1:1, 1:M, and M:M models.</p>
-
-    <h3>💡 Mini-Project: Fake Mini Database in JavaScript</h3>
-<pre>
-<code>
-const students = [
-  { id: 1, name: "Alex" },
-  { id: 2, name: "Jamie" }
-];
-const grades = [
-  { studentId: 1, course: "Math", grade: 95 },
-  { studentId: 1, course: "Science", grade: 88 },
-  { studentId: 2, course: "Math", grade: 76 }
-];
-function showGrades(id) {
-  alert(JSON.stringify(grades.filter(g => g.studentId === id), null, 2));
-}
-</code>
-</pre>
-    <button onclick="showGrades(1)">Show Alex's Grades</button>
-    <button onclick="showGrades(2)">Show Jamie's Grades</button>
-  </div>
-
-  <script>
-    function toggle(id) {
-      const box = document.getElementById(id);
-      box.style.display = box.style.display === 'block' ? 'none' : 'block';
-    }
-
-    // Mini-project scripts
-    const ideas = ["Create an AI robot", "Invent a water-powered phone", "Build a dream-journal app", "Make a homework automator"];
-    function newIdea() {
-      alert(ideas[Math.floor(Math.random() * ideas.length)]);
-    }
-
-    const history = {
-      1970: "Birth of modern microprocessors",
-      1980: "Rise of personal computers",
-      1990: "Internet expansion",
-      2000: "Mobile computing boom"
-    };
-
-    function convertBinary() {
-      const bin = document.getElementById('binInput').value;
-      alert(parseInt(bin, 2));
-    }
-
-    const studentsData = [
-      { id: 1, name: "Alex" },
-      { id: 2, name: "Jamie" }
-    ];
-
-    const gradesData = [
-      { studentId: 1, course: "Math", grade: 95 },
-      { studentId: 1, course: "Science", grade: 88 },
-      { studentId: 2, course: "Math", grade: 76 }
-    ];
-
-    function showGrades(id) {
-      alert(JSON.stringify(gradesData.filter(g => g.studentId === id), null, 2));
-    }
-  </script>
 </body>
 </html>
 
