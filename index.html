@@ -99,3 +99,156 @@
   <br>• Foreign keys
   <br>• Relational database structure</p>
 </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CIS 101 Lectures</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .lecture {
+      background: white;
+      padding: 20px;
+      margin: 10px 0;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .content {
+      display: none;
+      margin-top: 10px;
+      padding: 15px;
+      background: #fafafa;
+      border-left: 4px solid #0077cc;
+      border-radius: 6px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <h1>CIS 101 Interactive Lecture Notes</h1>
+
+  <div class="lecture" onclick="toggle('lec1')">Lecture 01 – Brainstorming</div>
+  <div id="lec1" class="content">
+    <p><strong>Summary:</strong><br>
+    Brainstorming is a creativity technique used to generate many ideas. It encourages open thinking without judgment and helps teams solve problems creatively.</p>
+    <h3>💡 Mini‑Project: Random Idea Generator</h3>
+    <p>This tool generates random brainstorming ideas.</p>
+<pre>
+<code>
+// JavaScript Idea Generator
+const ideas = ["Create an AI robot", "Invent a water-powered phone", "Build a dream‑journal app", "Make a homework automator"];
+function newIdea() {
+  alert(ideas[Math.floor(Math.random() * ideas.length)]);
+}
+</code>
+</pre>
+    <button onclick="alert(['Create an AI robot','Invent a water-powered phone','Build a dream‑journal app','Make a homework automator'][Math.floor(Math.random()*4)])">Generate Idea</button>
+  </div>
+
+  <div class="lecture" onclick="toggle('lec2')">Lecture 02 – Computing History</div>
+  <div id="lec2" class="content">
+    <p><strong>Summary:</strong><br>
+    This lecture covered the evolution of computing from early tools like the abacus to mechanical computers, and then to modern digital systems.</p>
+    <h3>💡 Mini‑Project: Interactive Computing Timeline</h3>
+    <p>Click a year to see what happened.</p>
+<pre>
+<code>
+// Simple timeline object
+const history = {
+  1970: "Birth of modern microprocessors",
+  1980: "Rise of personal computers",
+  1990: "Internet expansion",
+  2000: "Mobile computing boom"
+};
+</code>
+</pre>
+    <button onclick="alert('1970: Birth of modern microprocessors')">1970</button>
+    <button onclick="alert('1980: Rise of personal computers')">1980</button>
+    <button onclick="alert('1990: Internet expansion')">1990</button>
+    <button onclick="alert('2000: Mobile computing boom')">2000</button>
+  </div>
+
+  <div class="lecture" onclick="toggle('lec3')">Lectures 03 & 04 – Data Storage</div>
+  <div id="lec3" class="content">
+    <p><strong>Summary:</strong><br>
+    Data storage covers binary numbers, bits/bytes, and types of storage devices like SSDs, HDDs, and optical media.</p>
+    <h3>💡 Mini‑Project: Binary → Decimal Converter</h3>
+    <p>Type an 8‑bit binary number to convert it.</p>
+<pre>
+<code>
+function convertBinary() {
+  const bin = document.getElementById('binInput').value;
+  alert(parseInt(bin, 2));
+}
+</code>
+</pre>
+    Binary: <input id="binInput" maxlength="8" placeholder="e.g., 10101010" />
+    <button onclick="convertBinary()">Convert</button>
+  </div>
+
+  <div class="lecture" onclick="toggle('lec5')">Lecture 05 – Databases</div>
+  <div id="lec5" class="content">
+    <p><strong>Summary:</strong><br>
+    Databases store information in structured formats like tables. You learned about records, fields, keys, and why databases ensure accurate data.</p>
+    <h3>💡 Mini‑Project: SQL Table Creator Example</h3>
+<pre>
+<code>
+CREATE TABLE Students (
+  id INT PRIMARY KEY,
+  name VARCHAR(50),
+  grade INT
+);
+INSERT INTO Students VALUES (1, 'Alex', 90);
+SELECT * FROM Students;
+</code>
+</pre>
+    <p>This example shows how SQL creates and queries data.</p>
+  </div>
+
+  <div class="lecture" onclick="toggle('lec6')">Lecture 06 – Databases (ERDs & Relations)</div>
+  <div id="lec6" class="content">
+    <p><strong>Summary:</strong><br>
+    ERDs show how tables relate in a database. You learned entities, attributes, keys, and relationship types.</p>
+    <h3>💡 Mini‑Project: Fake Mini Database in JavaScript</h3>
+<pre>
+<code>
+// Example of 1-to-many relationship
+const students = [
+  { id: 1, name: "Alex" },
+  { id: 2, name: "Jamie" }
+];
+const grades = [
+  { studentId: 1, course: "Math", grade: 95 },
+  { studentId: 1, course: "Science", grade: 88 },
+  { studentId: 2, course: "Math", grade: 76 }
+];
+function showGrades(id) {
+  alert(JSON.stringify(grades.filter(g => g.studentId === id), null, 2));
+}
+</code>
+</pre>
+    <button onclick="showGrades(1)">Show Alex's Grades</button>
+    <button onclick="showGrades(2)">Show Jamie's Grades</button>
+  </div>
+
+  <script>
+    function toggle(id) {
+      const box = document.getElementById(id);
+      box.style.display = box.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
