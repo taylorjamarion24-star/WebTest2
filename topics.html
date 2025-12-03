@@ -1,53 +1,4 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Course Topics</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-<header>
-  <h1>CIS / Web Design Topics</h1>
-</header>
-
-<nav>
-  <a href="index.html">Home</a>
-  <a href="topics.html">Topics</a>
-</nav>
-
-<div class="container">
-
-  <div class="card">
-    <h2>Lecture Summaries</h2>
-
-    <h3>Lecture 01 — Brainstorming</h3>
-    <p>How to generate and evaluate creative ideas.</p>
-    <a href="Lecture 01 - Brainstorming (1).pptx" download>Download Slides</a>
-
-    <hr>
-
-    <h3>Lecture 02 — Computing History</h3>
-    <p>The evolution of computing technology.</p>
-    <a href="Lecture 02 - Computing History (1).pptx" download>Download Slides</a>
-
-    <hr>
-
-    <h3>Lecture 03 & 04 — Data Storage</h3>
-    <p>How data is stored, measured, and represented.</p>
-    <a href="Lectures 03 & 04 Data Storage-1 (1).pptx" download>Download Slides</a>
-
-    <hr>
-
-    <h3>Lecture 05 — Databases</h3>
-    <p>How databases and SQL queries work.</p>
-    <a href="Lecture 05 DB (1).pptx" download>Download Slides</a>
-
-    <hr>
-
-    <h3>Lecture 06 — DB Relations & ERD</h3>
-    <p>Entities, attributes, relations, and ER diagrams.</p>
-    <a href="Lecture 06 DB (1).pptx" download>Download Slides</a>
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -88,18 +39,24 @@
       line-height: 1.6;
     }
 
-    a.download {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 12px;
-      background: #0077cc;
-      color: white;
-      text-decoration: none;
+    pre {
+      background: #222;
+      color: #0f0;
+      padding: 12px;
       border-radius: 6px;
-      font-size: 14px;
+      overflow-x: auto;
     }
 
-    a.download:hover {
+    button {
+      padding: 10px 15px;
+      border: none;
+      background: #0077cc;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
       background: #005fa3;
     }
   </style>
@@ -112,74 +69,82 @@
 <!-- ===================== LECTURE 1 ===================== -->
 <div class="lecture" onclick="toggle('lec1')">Lecture 01 – Brainstorming</div>
 <div id="lec1" class="content">
-  <p><strong>Summary:</strong>  
-  Brainstorming teaches creativity, group thinking, and idea generation.</p>
+  <p><strong>Main Idea:</strong>  
+  Brainstorming is about generating ideas without judging them.</p>
 
-  <a class="download" 
-   href="https://cdn.inst-fs-iad-prod.inscloudgate.net/2d65a705-12ce-47fa-af3c-e8ed84c6e274/Lecture%2001%20-%20Brainstorming.pptx?token=eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCIsImtpZCI6ImNkbiJ9.eyJyZXNvdXJjZSI6Ii8yZDY1YTcwNS0xMmNlLTQ3ZmEtYWYzYy1lOGVkODRjNmUyNzQvTGVjdHVyZSUyMDAxJTIwLSUyMEJyYWluc3Rvcm1pbmcucHB0eCIsInRlbmFudCI6ImNhbnZhcyIsImlhdCI6MTc2NDY1MjkwMywiZXhwIjoxNzY0NzM5MzAzLCJqdGkiOiIzYzhmNmU0ZC1lZTcyLTQ5ZDItYWFkNy05OWI4MmJlYmFlYmIifQ.zxemngw5S1hHbzIy4soBEjhBH_0FpGm8-LmhCzJAz4jn_nxrsFx-7ck1CwfD3nxbTplXE8w0em1mGegzSGlIeQ&download=1&content_type=application%2Fvnd.openxmlformats-officedocument.presentationml.presentation"
-   download>
-   📥 Download Lecture 01 – Brainstorming
-</a>
-
-  </a>
+  <h3>Mini Example: Random Idea Generator</h3>
+  <pre>
+const ideas = ["New App", "New Game", "AI Project", "Website Redesign"];
+alert(ideas[Math.floor(Math.random() * ideas.length)]);
+  </pre>
+  <button onclick="brainstorm()">Generate Idea</button>
 </div>
 
 <!-- ===================== LECTURE 2 ===================== -->
 <div class="lecture" onclick="toggle('lec2')">Lecture 02 – Computing History</div>
 <div id="lec2" class="content">
-  <p><strong>Summary:</strong>  
-  Covers the evolution of computers from ancient tools to modern systems.</p>
+  <p><strong>Main Idea:</strong>  
+  Computers evolved from simple machines to powerful modern systems.</p>
 
-  <a class="download" href="Lecture 02 - Computing History (1).pptx" download>
-    📥 Download Lecture 02
-  </a>
+  <h3>Mini Example: Click a Year</h3>
+  <button onclick="alert('1970 → Microprocessors invented')">1970</button>
+  <button onclick="alert('1990 → Rise of the Internet')">1990</button>
+  <button onclick="alert('2007 → Smartphones explode in popularity')">2007</button>
 </div>
 
 <!-- ===================== LECTURE 3 & 4 ===================== -->
 <div class="lecture" onclick="toggle('lec3')">Lectures 03 & 04 – Data Storage</div>
 <div id="lec3" class="content">
-  <p><strong>Summary:</strong>  
-  Bits, bytes, file formats, and storage devices (HDD, SSD, optical, etc.).</p>
+  <p><strong>Main Idea:</strong>  
+  Data is stored in bits (0s and 1s). Storage devices hold these bits.</p>
 
-  <a class="download" href="Lectures 03 & 04 Data Storage-1 (1).pptx" download>
-    📥 Download Lecture 03 & 04
-  </a>
+  <h3>Mini Example: Binary → Decimal Converter</h3>
+  <input id="bin" placeholder="Enter 8-bit binary">
+  <button onclick="convertBin()">Convert</button>
 </div>
 
 <!-- ===================== LECTURE 5 ===================== -->
 <div class="lecture" onclick="toggle('lec5')">Lecture 05 – Databases</div>
 <div id="lec5" class="content">
-  <p><strong>Summary:</strong>  
-  Introduction to databases, tables, fields, keys, and SQL basics.</p>
+  <p><strong>Main Idea:</strong>  
+  Databases store information in tables using rows and columns.</p>
 
-  <a class="download" href="Lecture 05 DB (1).pptx" download>
-    📥 Download Lecture 05
-  </a>
+  <h3>Mini Example: Fake SQL Table</h3>
+  <pre>
+ID | Name | Grade
+------------------
+1  | Alex | 90
+2  | Sam  | 82
+  </pre>
 </div>
 
 <!-- ===================== LECTURE 6 ===================== -->
 <div class="lecture" onclick="toggle('lec6')">Lecture 06 – ERDs & Relationships</div>
 <div id="lec6" class="content">
-  <p><strong>Summary:</strong>  
-  ERDs, entities, attributes, and relationships (1:1, 1:M, M:M).</p>
+  <p><strong>Main Idea:</strong>  
+  ERDs show how data tables relate to each other.</p>
 
-  <a class="download" href="Lecture 06 DB (1).pptx" download>
-    📥 Download Lecture 06
-  </a>
+  <h3>Mini Example: Show Student Grades</h3>
+  <button onclick="alert('Alex → Math: 95, Science: 88')">Show Alex</button>
+  <button onclick="alert('Jamie → Math: 76')">Show Jamie</button>
 </div>
 
 <script>
-  function toggle(id) {
-    const box = document.getElementById(id);
-    box.style.display = box.style.display === 'block' ? 'none' : 'block';
-  }
+function toggle(id) {
+  const box = document.getElementById(id);
+  box.style.display = box.style.display === "block" ? "none" : "block";
+}
+
+function brainstorm() {
+  const ideas = ["New App", "AI Robot", "Game Concept", "Website Redesign"];
+  alert(ideas[Math.floor(Math.random() * ideas.length)]);
+}
+
+function convertBin() {
+  const b = document.getElementById("bin").value;
+  alert(parseInt(b, 2));
+}
 </script>
-
-</body>
-</html>
-
-  </div>
-</div>
 
 </body>
 </html>
