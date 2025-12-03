@@ -39,4 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+<script>
+  function toggle(id) {
+    const box = document.getElementById(id);
+    box.style.display = box.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
 
