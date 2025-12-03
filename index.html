@@ -3,6 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Design 101 - Home</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: #0077cc;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 40px;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      color: #0077cc;
+    }
+
+    .card p {
+      margin: 0 0 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      background: #0077cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: #005fa3;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Web Design 101</h1>
+  <p>Learn HTML • CSS • JavaScript • and More</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>Learn HTML</h2>
+    <p>Understand the structure of webpages, elements, tags, attributes, and building layouts.</p>
+    <a href="html.html" class="btn">Go to HTML Lessons</a>
+  </div>
+
+  <div class="card">
+    <h2>Learn CSS</h2>
+    <p>Style your webpages with colors, fonts, layouts, and animations using CSS.</p>
+    <a href="css.html" class="btn">Go to CSS Lessons</a>
+  </div>
+
+  <div class="card">
+    <h2>Learn JavaScript</h2>
+    <p>Add interactivity, animations, and functionality to your website using JavaScript.</p>
+    <a href="javascript.html" class="btn">Go to JavaScript Lessons</a>
+  </div>
+
+  <div class="card">
+    <h2>CIS 101 Interactive Lectures</h2>
+    <p>View interactive notes, coding demos, and mini-projects from your CIS 101 class.</p>
+    <a href="lectures.html" class="btn">View CIS 101 Page</a>
+  </div>
+
+  <div class="card">
+    <h2>More Topics Coming Soon</h2>
+    <p>Databases, UI/UX design, APIs, servers and more!</p>
+  </div>
+
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CIS 101 Interactive Lecture Website</title>
   <style>
     body {
