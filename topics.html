@@ -1,149 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CIS 101 Interactive Lectures</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CIS 101 — All Lectures (01–11)</title>
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      margin: 0;
-      padding: 20px;
+    :root{
+      --bg:#f4f6f8; --card:#fff; --accent:#0077cc; --muted:#6b7280;
+      --radius:12px; --shadow:0 8px 30px rgba(15,30,45,0.06);
+      --code-bg:#0b1220; --code-green:#9ff4c8;
     }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .lecture {
-      background: white;
-      padding: 20px;
-      margin: 10px 0;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 20px;
-      font-weight: bold;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .content {
-      display: none;
-      margin-top: 10px;
-      padding: 15px;
-      background: #fafafa;
-      border-left: 4px solid #0077cc;
-      border-radius: 6px;
-      line-height: 1.6;
-    }
-
-    pre {
-      background: #222;
-      color: #0f0;
-      padding: 12px;
-      border-radius: 6px;
-      overflow-x: auto;
-    }
-
-    button {
-      padding: 10px 15px;
-      border: none;
-      background: #0077cc;
-      color: white;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #005fa3;
-    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:#07203a}
+    header{background:linear-gradient(90deg,var(--accent),#5aa8e6);color:#fff;padding:22px 16px;text-align:center}
+    header h1{margin:0;font-size:20px}
+    .wrap{max-width:1100px;margin:26px auto;padding:12px}
+    .lecture{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;margin:12px 0;cursor:pointer;display:flex;align-items:center;justify-content:space-between}
+    .lecture .title{font-weight:700;font-size:16px}
+    .lecture .chev{font-size:20px;color:var(--accent)}
+    .panel{display:none;background:#fafafa;border-left:4px solid var(--accent);padding:16px;margin-top:8px;border-radius:8px}
+    pre.code{background:var(--code-bg);color:var(--code-green);padding:12px;border-radius:8px;overflow:auto}
+    button.demo{background:var(--accent);color:#fff;border:none;padding:8px 12px;border-radius:8px;cursor:pointer}
+    .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:8px}
+    input[type=text]{padding:8px;border-radius:6px;border:1px solid #ddd}
+    .small{color:var(--muted);font-size:0.95rem}
+    @media(min-width:900px){ .lecture{padding:20px} }
+    footer{margin:28px 0;text-align:center;color:var(--muted)}
   </style>
 </head>
-
 <body>
 
-<h1>CIS 101 Interactive Lecture Notes</h1>
+<header>
+  <h1>CIS 101 — Interactive Lectures (01 → 11)</h1>
+  <div style="margin-top:6px;font-size:0.9rem;opacity:0.95">Click a lecture to open its summary & mini-demo</div>
+</header>
 
-<!-- ===================== LECTURE 1 ===================== -->
-<div class="lecture" onclick="toggle('lec1')">Lecture 01 – Brainstorming</div>
-<div id="lec1" class="content">
-  <p><strong>Main Idea:</strong>  
-  Brainstorming is about generating ideas without judging them.</p>
+<div class="wrap">
 
-  <h3>Mini Example: Random Idea Generator</h3>
-  <pre>
-const ideas = ["New App", "New Game", "AI Project", "Website Redesign"];
-alert(ideas[Math.floor(Math.random() * ideas.length)]);
-  </pre>
-  <button onclick="brainstorm()">Generate Idea</button>
+  <!-- Lecture 01 -->
+  <div class="lecture" data-target="p1"><div class="title">Lecture 01 — Brainstorming</div><div class="chev">+</div></div>
+  <div id="p1" class="panel">
+    <p><strong>Main idea:</strong> Generate many ideas without censorship; evaluate later.</p>
+    <div class="row">
+      <button class="demo" onclick="brainstorm()">Generate Idea</button>
+      <div id="ideaOut" class="small" style="margin-left:8px">Click generate to see an idea.</div>
+    </div>
+    <pre class="code">// Example generator (JS):
+const ideas = ["AI tutor","Homework automator","Sasquatch tonic shop","Study timer app"];
+// brainstorm() chooses one at random</pre>
+  </div>
+
+  <!-- Lecture 02 -->
+  <div class="lecture" data-target="p2"><div class="title">Lecture 02 — Computing History</div><div class="chev">+</div></div>
+  <div id="p2" class="panel">
+    <p><strong>Main idea:</strong> From mechanical tools to modern microprocessors — technology evolved in layers.</p>
+    <div class="row">
+      <button class="demo" onclick="alert('1970 → microprocessors, 1980 → PCs, 1990 → Internet')">Show Key Years</button>
+      <button class="demo" onclick="document.getElementById('historyOut').textContent='1970: microprocessors; 1980: PCs; 1990: Internet; 2000: mobile'">Write Summary</button>
+      <div id="historyOut" class="small" style="margin-left:8px"></div>
+    </div>
+  </div>
+
+  <!-- Lecture 03 -->
+  <div class="lecture" data-target="p3"><div class="title">Lecture 03 — Data Storage (part 1)</div><div class="chev">+</div></div>
+  <div id="p3" class="panel">
+    <p><strong>Main idea:</strong> Data is bits and bytes. Different media store bits physically/electronically.</p>
+    <div class="row">
+      <input id="binIn" type="text" placeholder="Enter 8-bit binary e.g. 10101010" />
+      <button class="demo" onclick="convertBinary()">Convert</button>
+      <div id="binOut" class="small" style="margin-left:8px">Decimal: —</div>
+    </div>
+    <pre class="code">// convertBinary() uses parseInt(binary,2) to show decimal</pre>
+  </div>
+
+  <!-- Lecture 04 -->
+  <div class="lecture" data-target="p4"><div class="title">Lecture 04 — Data Storage (part 2)</div><div class="chev">+</div></div>
+  <div id="p4" class="panel">
+    <p><strong>Main idea:</strong> Storage units (KB, MB, GB), and device trade-offs (speed vs capacity).</p>
+    <div class="row">
+      <button class="demo" onclick="alert('SSD = fast, HDD = cheap capacity, Optical = archival')">Compare Devices</button>
+    </div>
+    <pre class="code">// Practical tip: use SSD for OS/apps, HDD for bulk files</pre>
+  </div>
+
+  <!-- Lecture 05 -->
+  <div class="lecture" data-target="p5"><div class="title">Lecture 05 — Databases (intro)</div><div class="chev">+</div></div>
+  <div id="p5" class="panel">
+    <p><strong>Main idea:</strong> Databases store structured rows & columns; keys identify records.</p>
+    <div class="row">
+      <pre class="code">ID | Name  | Grade
+1  | Alex  | 90
+2  | Maria | 88</pre>
+      <button class="demo" onclick="alert('SELECT * FROM Students; // returns rows above')">Run SQL Example</button>
+    </div>
+  </div>
+
+  <!-- Lecture 06 -->
+  <div class="lecture" data-target="p6"><div class="title">Lecture 06 — ERDs & Relationships</div><div class="chev">+</div></div>
+  <div id="p6" class="panel">
+    <p><strong>Main idea:</strong> ERDs model entities and relationships (1:1, 1:M, M:M).</p>
+    <div class="row">
+      <button class="demo" onclick="alert('Students 1-to-many Grades — foreign key studentId links grades to students')">Show Example</button>
+      <button class="demo" onclick="alert(JSON.stringify([{id:1,name:'Alex'},{id:2,name:'Sam'}]))">Show Entities</button>
+    </div>
+  </div>
+
+  <!-- Lecture 07 -->
+  <div class="lecture" data-target="p7"><div class="title">Lecture 07 — Transactions & ACID</div><div class="chev">+</div></div>
+  <div id="p7" class="panel">
+    <p><strong>Main idea:</strong> Transactions ensure atomic, consistent, isolated, durable operations.</p>
+    <div class="row">
+      <button class="demo" onclick="startTransaction()">Start Transaction</button>
+      <button class="demo" onclick="commitTransaction()">Commit</button>
+      <button class="demo" onclick="rollbackTransaction()">Rollback</button>
+      <div id="txStatus" class="small" style="margin-left:8px">No active transaction</div>
+    </div>
+    <pre class="code">// Try start → (change) → commit or rollback to see state change</pre>
+  </div>
+
+  <!-- Lecture 08 -->
+  <div class="lecture" data-target="p8"><div class="title">Lecture 08 — Indexing & Query Performance</div><div class="chev">+</div></div>
+  <div id="p8" class="panel">
+    <p><strong>Main idea:</strong> Indexes speed lookups; proper keys improve query time.</p>
+    <div class="row">
+      <button class="demo" onclick="runSearch(false)">Linear search (slow)</button>
+      <button class="demo" onclick="runSearch(true)">Indexed search (fast)</button>
+      <div id="searchOut" class="small" style="margin-left:8px">Result: —</div>
+    </div>
+    <pre class="code">// Indexed search uses a map (object) for O(1) lookup</pre>
+  </div>
+
+  <!-- Lecture 09 -->
+  <div class="lecture" data-target="p9"><div class="title">Lecture 09 — Backups & Data Integrity</div><div class="chev">+</div></div>
+  <div id="p9" class="panel">
+    <p><strong>Main idea:</strong> Backups and integrity checks protect data from loss and corruption.</p>
+    <div class="row">
+      <button class="demo" onclick="makeBackup()">Make Backup</button>
+      <button class="demo" onclick="restoreBackup()">Restore Backup</button>
+      <div id="bkOut" class="small" style="margin-left:8px">No backup</div>
+    </div>
+    <pre class="code">// Simulated backup copies data to a 'backup' variable</pre>
+  </div>
+
+  <!-- Lecture 10 -->
+  <div class="lecture" data-target="p10"><div class="title">Lecture 10 — Web Basics (HTTP & HTML)</div><div class="chev">+</div></div>
+  <div id="p10" class="panel">
+    <p><strong>Main idea:</strong> Web pages are served over HTTP; HTML structures content; JS adds behavior.</p>
+    <div class="row">
+      <button class="demo" onclick="loadHello()">Simulate AJAX Load</button>
+      <div id="ajaxOut" class="small" style="margin-left:8px">Server: —</div>
+    </div>
+    <pre class="code">// Simulated fetch using setTimeout to show dynamic page loading</pre>
+  </div>
+
+  <!-- Lecture 11 -->
+  <div class="lecture" data-target="p11"><div class="title">Lecture 11 — Git & GitHub Basics</div><div class="chev">+</div></div>
+  <div id="p11" class="panel">
+    <p><strong>Main idea:</strong> Version control tracks changes; GitHub hosts repos and Pages.</p>
+    <div class="row">
+      <pre class="code">git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin &lt;repo-url&gt;
+git push -u origin main
+</pre>
+      <button class="demo" onclick="copyCommands()">Copy Commands</button>
+      <div id="copyStatus" class="small" style="margin-left:8px"></div>
+    </div>
+  </div>
+
 </div>
 
-<!-- ===================== LECTURE 2 ===================== -->
-<div class="lecture" onclick="toggle('lec2')">Lecture 02 – Computing History</div>
-<div id="lec2" class="content">
-  <p><strong>Main Idea:</strong>  
-  Computers evolved from simple machines to powerful modern systems.</p>
-
-  <h3>Mini Example: Click a Year</h3>
-  <button onclick="alert('1970 → Microprocessors invented')">1970</button>
-  <button onclick="alert('1990 → Rise of the Internet')">1990</button>
-  <button onclick="alert('2007 → Smartphones explode in popularity')">2007</button>
-</div>
-
-<!-- ===================== LECTURE 3 & 4 ===================== -->
-<div class="lecture" onclick="toggle('lec3')">Lectures 03 & 04 – Data Storage</div>
-<div id="lec3" class="content">
-  <p><strong>Main Idea:</strong>  
-  Data is stored in bits (0s and 1s). Storage devices hold these bits.</p>
-
-  <h3>Mini Example: Binary → Decimal Converter</h3>
-  <input id="bin" placeholder="Enter 8-bit binary">
-  <button onclick="convertBin()">Convert</button>
-</div>
-
-<!-- ===================== LECTURE 5 ===================== -->
-<div class="lecture" onclick="toggle('lec5')">Lecture 05 – Databases</div>
-<div id="lec5" class="content">
-  <p><strong>Main Idea:</strong>  
-  Databases store information in tables using rows and columns.</p>
-
-  <h3>Mini Example: Fake SQL Table</h3>
-  <pre>
-ID | Name | Grade
-------------------
-1  | Alex | 90
-2  | Sam  | 82
-  </pre>
-</div>
-
-<!-- ===================== LECTURE 6 ===================== -->
-<div class="lecture" onclick="toggle('lec6')">Lecture 06 – ERDs & Relationships</div>
-<div id="lec6" class="content">
-  <p><strong>Main Idea:</strong>  
-  ERDs show how data tables relate to each other.</p>
-
-  <h3>Mini Example: Show Student Grades</h3>
-  <button onclick="alert('Alex → Math: 95, Science: 88')">Show Alex</button>
-  <button onclick="alert('Jamie → Math: 76')">Show Jamie</button>
-</div>
+<footer>
+  <div class="small">Built for Web Design 101 • Year <span id="year"></span></div>
+</footer>
 
 <script>
-function toggle(id) {
-  const box = document.getElementById(id);
-  box.style.display = box.style.display === "block" ? "none" : "block";
-}
+  // fill year
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-function brainstorm() {
-  const ideas = ["New App", "AI Robot", "Game Concept", "Website Redesign"];
-  alert(ideas[Math.floor(Math.random() * ideas.length)]);
-}
+  // toggle panels
+  document.querySelectorAll('.lecture').forEach(el=>{
+    el.addEventListener('click', ()=>{
+      const id = el.dataset.target;
+      const panel = document.getElementById(id);
+      if(!panel) return;
+      const open = panel.style.display === 'block';
+      // close others optionally -- keep simple open/close
+      panel.style.display = open ? 'none' : 'block';
+      el.querySelector('.chev').textContent = open ? '+' : '−';
+    });
+  });
 
-function convertBin() {
-  const b = document.getElementById("bin").value;
-  alert(parseInt(b, 2));
-}
+  // Lecture 01
+  function brainstorm(){
+    const ideas = ["AI tutor","Homework automator","Study-scheduler","Micro-project demo"];
+    const pick = ideas[Math.floor(Math.random()*ideas.length)];
+    document.getElementById('ideaOut').textContent = pick;
+  }
+
+  // Lecture 03 binary convert
+  function convertBinary(){
+    const b = document.getElementById('binIn').value.trim();
+    if(!/^[01]+$/.test(b)){ alert('Enter only 0s and 1s'); return; }
+    document.getElementById('binOut').textContent = 'Decimal: ' + parseInt(b,2);
+  }
+
+  // Lecture 07 transactions
+  let txActive = false;
+  let dbState = {balance:100};
+  let txBuffer = null;
+  function startTransaction(){
+    if(txActive){ alert('Transaction already active'); return; }
+    txActive = true; txBuffer = JSON.parse(JSON.stringify(dbState));
+    document.getElementById('txStatus').textContent = 'Transaction started — buffered state saved';
+  }
+  function commitTransaction(){
+    if(!txActive){ alert('No active transaction'); return; }
+    txActive=false; txBuffer=null;
+    document.getElementById('txStatus').textContent = 'Committed — permanent';
+  }
+  function rollbackTransaction(){
+    if(!txActive){ alert('No active transaction'); return; }
+    dbState = JSON.parse(JSON.stringify(txBuffer)); txActive=false; txBuffer=null;
+    document.getElementById('txStatus').textContent = 'Rolled back — state restored';
+  }
+
+  // Lecture 08 indexing demo
+  const sample = [];
+  for(let i=0;i<20000;i++) sample.push({id:i,name:'name'+i});
+  const index = {};
+  sample.forEach(s=>index[s.id]=s);
+  function runSearch(useIndex){
+    const target = 19999; // last element
+    const t0 = performance.now();
+    let found;
+    if(useIndex){
+      found = index[target];
+    } else {
+      found = sample.find(x=>x.id===target);
+    }
+    const t1 = performance.now();
+    document.getElementById('searchOut').textContent = `Found id=${found.id} in ${(t1-t0).toFixed(3)} ms (${useIndex?'indexed':'linear'})`;
+  }
+
+  // Lecture 09 backup demo
+  let liveData = [{id:1,name:'Alex'},{id:2,name:'Jamie'}];
+  let backupData = null;
+  function makeBackup(){ backupData = JSON.parse(JSON.stringify(liveData)); document.getElementById('bkOut').textContent = 'Backup created'; }
+  function restoreBackup(){ if(!backupData){ alert('No backup exists'); return; } liveData = JSON.parse(JSON.stringify(backupData)); document.getElementById('bkOut').textContent='Backup restored'; }
+
+  // Lecture 10 simulate ajax/load
+  function loadHello(){
+    document.getElementById('ajaxOut').textContent = 'Loading...';
+    setTimeout(()=>{ document.getElementById('ajaxOut').textContent = 'Server: Hello from (simulated) server!'; }, 700);
+  }
+
+  // Lecture 11 copy commands (uses clipboard API)
+  function copyCommands(){
+    const txt = "git init\ngit add .\ngit commit -m \"first commit\"\ngit remote add origin <repo-url>\ngit push -u origin main";
+    if(navigator.clipboard){
+      navigator.clipboard.writeText(txt).then(()=>{ document.getElementById('copyStatus').textContent = 'Commands copied to clipboard'; });
+    } else {
+      alert('Clipboard API not supported — copy manually:\n\n' + txt);
+    }
+  }
 </script>
 
 </body>
