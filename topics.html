@@ -47,6 +47,132 @@
     <h3>Lecture 06 — DB Relations & ERD</h3>
     <p>Entities, attributes, relations, and ER diagrams.</p>
     <a href="Lecture 06 DB (1).pptx" download>Download Slides</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CIS 101 Interactive Lectures</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .lecture {
+      background: white;
+      padding: 20px;
+      margin: 10px 0;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .content {
+      display: none;
+      margin-top: 10px;
+      padding: 15px;
+      background: #fafafa;
+      border-left: 4px solid #0077cc;
+      border-radius: 6px;
+      line-height: 1.6;
+    }
+
+    a.download {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #0077cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    a.download:hover {
+      background: #005fa3;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>CIS 101 Interactive Lecture Notes</h1>
+
+<!-- ===================== LECTURE 1 ===================== -->
+<div class="lecture" onclick="toggle('lec1')">Lecture 01 – Brainstorming</div>
+<div id="lec1" class="content">
+  <p><strong>Summary:</strong>  
+  Brainstorming teaches creativity, group thinking, and idea generation.</p>
+
+  <a class="download" href="Lecture 01 - Brainstorming (1).pptx" download>
+    📥 Download Lecture 01
+  </a>
+</div>
+
+<!-- ===================== LECTURE 2 ===================== -->
+<div class="lecture" onclick="toggle('lec2')">Lecture 02 – Computing History</div>
+<div id="lec2" class="content">
+  <p><strong>Summary:</strong>  
+  Covers the evolution of computers from ancient tools to modern systems.</p>
+
+  <a class="download" href="Lecture 02 - Computing History (1).pptx" download>
+    📥 Download Lecture 02
+  </a>
+</div>
+
+<!-- ===================== LECTURE 3 & 4 ===================== -->
+<div class="lecture" onclick="toggle('lec3')">Lectures 03 & 04 – Data Storage</div>
+<div id="lec3" class="content">
+  <p><strong>Summary:</strong>  
+  Bits, bytes, file formats, and storage devices (HDD, SSD, optical, etc.).</p>
+
+  <a class="download" href="Lectures 03 & 04 Data Storage-1 (1).pptx" download>
+    📥 Download Lecture 03 & 04
+  </a>
+</div>
+
+<!-- ===================== LECTURE 5 ===================== -->
+<div class="lecture" onclick="toggle('lec5')">Lecture 05 – Databases</div>
+<div id="lec5" class="content">
+  <p><strong>Summary:</strong>  
+  Introduction to databases, tables, fields, keys, and SQL basics.</p>
+
+  <a class="download" href="Lecture 05 DB (1).pptx" download>
+    📥 Download Lecture 05
+  </a>
+</div>
+
+<!-- ===================== LECTURE 6 ===================== -->
+<div class="lecture" onclick="toggle('lec6')">Lecture 06 – ERDs & Relationships</div>
+<div id="lec6" class="content">
+  <p><strong>Summary:</strong>  
+  ERDs, entities, attributes, and relationships (1:1, 1:M, M:M).</p>
+
+  <a class="download" href="Lecture 06 DB (1).pptx" download>
+    📥 Download Lecture 06
+  </a>
+</div>
+
+<script>
+  function toggle(id) {
+    const box = document.getElementById(id);
+    box.style.display = box.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+</body>
+</html>
 
   </div>
 </div>
