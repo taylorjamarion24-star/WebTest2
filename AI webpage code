@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to Computer Science</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f7fa;
+            color: #333;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+        }
+
+        nav {
+            background: #34495e;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 40px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Introduction To Computer Science</h1>
+    <p>Your first step into the world of computing</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#topics">Topics</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+    <section id="about" class="card">
+        <h2>About the Course</h2>
+        <p>
+            This course provides a broad introduction to computer science.
+            Students will explore programming, algorithms, data structures,
+            hardware, and the foundations of how computers work. No prior
+            experience is needed!
+        </p>
+    </section>
+
+    <section id="topics" class="card">
+        <h2>What You'll Learn</h2>
+        <ul>
+            <li>Basics of programming (variables, loops, functions)</li>
+            <li>How computers process information</li>
+            <li>Algorithms and problem solving</li>
+            <li>Introduction to data structures</li>
+            <li>History of computing</li>
+            <li>Real-world applications of computer science</li>
+        </ul>
+    </section>
+
+    <section id="schedule" class="card">
+        <h2>Course Schedule</h2>
+        <p><strong>Week 1:</strong> Introduction + What is a Computer?</p>
+        <p><strong>Week 2:</strong> Basics of Programming</p>
+        <p><strong>Week 3:</strong> Algorithms & Logic</p>
+        <p><strong>Week 4:</strong> Data Structures</p>
+        <p><strong>Week 5:</strong> Hardware & Operating Systems</p>
+        <p><strong>Week 6:</strong> Final Project</p>
+    </section>
+
+    <section id="contact" class="card">
+        <h2>Contact</h2>
+        <p>Instructor: Dr. Jane Doe</p>
+        <p>Email: csintro@example.edu</p>
+        <p>Office Hours: Mon & Wed, 2-4 PM</p>
+    </section>
+
+</div>
+
+<footer>
+    © 2025 Introduction to Computer Science. All Rights Reserved.
+</footer>
+
+</body>
+</html>
